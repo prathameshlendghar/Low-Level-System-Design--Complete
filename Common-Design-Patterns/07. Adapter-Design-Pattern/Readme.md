@@ -42,3 +42,15 @@
 3. **Single responsibility Principle**: Subjective here as client & target/adaptee defines what other things it is doing. But our adapter follows SRP.
 4. **Liskov substitution Principle**: All child class are able to substitute parent class seamlessly as of now.
 5. **Interface Segregation Principle**: No class is forced to implement method they do not need.
+
+
+## Discussion on Code Examples
+
+### Requirements:
+1. We have a well-functional system with the **PayPal's payment gateway**.
+2. But as there was some performance issue and higher prices we want to switch to the **Razorpay's payment gateway**.
+3. We need to do this with as **minimum alteration** in our original code as possible
+
+### Solution:
+- We can write new Adapter class that mimics the interface similar to what PayPal provides, and we will use the underlying implementation of Razorpay.
+- Code reference for the same: [Code-Example](Code-Example)
