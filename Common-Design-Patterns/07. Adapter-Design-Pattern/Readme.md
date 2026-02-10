@@ -25,6 +25,13 @@
 2. **Adapter**: Adapter's work is to provide interface compatible with client and conversion of client request to the compatible adaptee request.
 3. **Adaptee**: Client request is actually resolved by adaptee(made compatible with adapter or even a direct request) and returns back the response.
 
+> **Note:**
+> * `IAdaptee` in the **1st diagram** is consider as a **Target** i.e. the interface our client directly talks to, and get their request's response directly.
+> * In 2nd diagram still the **Target Interface** is `IAdaptee`. That means we will get our request resolved from this class itself. 
+>   * But the thing is it is not compatible with our code assumptions, so we make an IAdapter that is compatible to the interface definition we have assumed in our entire code, and acts as a target for us. 
+>   * This `IAdapter`'s class (The assumed Target) then convert the request format to actual target format, and then we get our desired response from there.
+
+
 ![img.png](Images/img.png)
 
 ![img_1.png](Images/img_1.png)
