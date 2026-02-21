@@ -116,7 +116,7 @@ public class VendingMachine {
 4. Now the vending machine will know which state it is in currently, by storing the state object in it.
 5. And for each action/method requested by user to vending machine. The machine delegates it to the **state** object.
 
-![img.png](images/img4.png)
+![img.png](images/img_2.png)
 
 #### Why it is better than previous?
 - If we want to add new states then we will just inherit the State class and create new state.
